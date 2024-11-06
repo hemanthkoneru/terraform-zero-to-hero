@@ -23,3 +23,13 @@ The reason is that becasue of the statefile.
 Now we need to execute the below command so that the terraform will understand and import the resources from the aws.
 
 $ terraform import aws_instance.example <instanceid/resourceid>
+
+after executing the above command, we can see the below output
+**"Import successful"**
+
+
+Now if we exewcute the init and plan commands again, then we can see the existing resource configurations has successfully been imported to terraform and it is able to identify that the resource is already existing.
+
+So the o/p after the terraform plan command will be as shown below.
+**Plan: 0 to add, 1 to change, 0 to destroy.** ## previously it informed creating a resource, but now it is saying that changing a resource.
+
